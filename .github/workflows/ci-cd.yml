@@ -45,27 +45,4 @@ jobs:
           PA_USERNAME: ${{ secrets.PA_USERNAME }}
           PA_API_TOKEN: ${{ secrets.PA_API_TOKEN }}
         run: |
-          # Пример через официальную утилиту PythonAnywhere (pa_autodeploy.py) ИЛИ через SSH
-          # 1. Клонируем репозиторий на PythonAnywhere
-          # 2. Устанавливаем зависимости
-          # 3. Перезапускаем веб-приложение
-          
-          # --- ВАРИАНТ 1: Использовать PythonAnywhere API (скрипт pa_autodeploy.py) ---
-          # pip install pythonanywhere
-          # python pa_autodeploy.py --username $PA_USERNAME --api-token $PA_API_TOKEN
-          
-          # --- ВАРИАНТ 2: Использовать SSH для копирования файлов ---
-          
-          # Подготовка ключей/паролей: (для примера используем пароль, но лучше SSH-ключ)
-          # echo $PA_API_TOKEN > pass.txt
-          
-          # Скопируем файлы на PythonAnywhere (путь ~/mysite — пример)
-          # sshpass -f pass.txt scp -r . $PA_USERNAME@ssh.pythonanywhere.com:~/mysite
-          
-          # Установим зависимости на PythonAnywhere
-          # sshpass -f pass.txt ssh $PA_USERNAME@ssh.pythonanywhere.com "pip install --user -r ~/mysite/requirements.txt"
-          
-          # Перезапустим веб-приложение
-          # sshpass -f pass.txt ssh $PA_USERNAME@ssh.pythonanywhere.com "touch /var/www/$PA_USERNAME_pythonanywhere_com_wsgi.py"
-          
-          echo "CD step completed (placeholder). Configure actual commands for your environment."
+         
